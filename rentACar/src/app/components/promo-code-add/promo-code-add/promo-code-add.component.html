@@ -1,0 +1,62 @@
+
+<div class="content" style="margin-top: 15px;">
+  <div class="col-md-12">
+      <div class="card">
+          <div class="card-header"><h5 class="title">Renk ekle</h5></div>
+          <div class="card-body">
+              <form [formGroup]="promoCodeAddForm">
+                  <div class="mb-3">
+                      <label for="code">Kod</label>
+                      <div class="form-group">
+                          <input type="text"
+                          id="code"
+                          formControlName="code" class="form-control"
+                          placeholder="Kod"/>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      <label for="discountRate">İndirim Oranı</label>
+                      <div class="form-group">
+                          <input type="number"
+                          id="discountRate"
+                          formControlName="discountRate" class="form-control"
+                          placeholder="İndirim oranı"/>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      <label for="name">Başlangıç Tarihi</label>
+                      <div class="form-group">
+                          <input type="date"
+                          id="startDate"
+                          formControlName="startDate" class="form-control"
+                          placeholder="Başlangıç tarihi"/>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      <label for="name">Bitiş Tarihi</label>
+                      <div class="form-group">
+                          <input type="date"
+                          id="endDate"
+                          formControlName="endDate" class="form-control"
+                          placeholder="Bitiş tarihi"/>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="name">Tanım</label>
+                    <div class="form-group">
+                        <input type="text"
+                        id="description"
+                        formControlName="description" class="form-control"
+                        placeholder="Tanım"/>
+                    </div>
+                </div>
+              </form>
+          </div>
+          <div class="card-footer">
+              <button class="btn btn-fill btn-primary" (click)="add()">Ekle</button>
+          </div>
+      </div>
+
+  </div>
+
+</div>

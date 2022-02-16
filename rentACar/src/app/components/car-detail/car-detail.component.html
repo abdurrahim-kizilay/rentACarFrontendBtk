@@ -1,0 +1,73 @@
+<div class="row" style="margin-top: 15px;">
+  <div class="col-md-6">
+    <div class="row" style="margin-left: 10px;">
+      <div class="card" >
+        <img
+          src="https://th.bing.com/th/id/R.4edc4130c823e601baab18c2b8fbe54f?rik=E7Nw2NCSNrzNpA&riu=http%3a%2f%2fwww.enkisa.com%2fwp-content%2fuploads%2f2015%2f07%2fSpor-Araba-Resimleri.jpg&ehk=cc82heDE21PMOJFH9IY%2bG1sfVjJcvLIzh3BIwQmPI4M%3d&risl=&pid=ImgRaw&r=0"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{car.brandName}}</h5>
+          <p class="card-text"><b>Tanım: </b>{{car.description}}</p>
+          <p class="card-text"><b>Rengi: </b>{{car.colorName}}</p>
+          <p class="card-text"><b>Günlük Ücret: </b>{{car.dailyPrice}} ₺</p>
+          <p class="card-text"><b>Minimum Yaş: </b>{{car.minAge}}</p>
+          <p class="card-text"><b>Findex Değeri: </b>{{car.findexScore}}</p>
+          <p class="card-text"><b>Modeli: </b>{{car.model}}</p>
+          <p class="card-text"><b>Kilometresi: </b>{{car.kilometer}} km</p>
+          <!-- <form [formGroup]="maintenanceAddForm">
+            <div class="mb-3">
+              <label for="maintenanceStart">Başlangıç Tarihi</label>
+              <div class="form-group">
+                <input type="date" id="maintenanceStart" formControlName="maintenanceStart" class="form-control"
+                  placeholder="Başlangıç tarihi" />
+              </div>
+            </div>
+          </form> -->
+          <button class="btn btn-primary" (click)="addMaintenance()">Bakıma Ver</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <!-- <div class="card-header">
+        <h5 class="title">Kirala</h5>
+      </div> -->
+      <div class="card-body">
+        <form [formGroup]="rentalAddForm">
+          <div class="mb-3">
+            <label for="pickUpCityId">Nereden Alacaksınız</label>
+            <select class="form-select" aria-label="Default select example" id="pickUpCityId" formControlName="pickUpCityId">
+              <option *ngFor="let city of cities" value="{{city.id}}">{{city.name}}</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="rentDate">Alış Tarihi</label>
+            <div class="form-group">
+              <input type="date" id="rentDate" formControlName="rentDate" class="form-control"
+                placeholder="Başlangıç tarihi" />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="returnDate">İade Tarihi</label>
+            <div class="form-group">
+              <input type="date" id="returnDate" formControlName="returnDate" class="form-control"
+                placeholder="Bitiş tarihi" />
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="additionalServiceId">Ek Hizmet Seçiniz</label>
+            <select class="form-select" aria-label="Default select example" id="additionalServiceId" formControlName="additionalServiceId">
+              <option></option>
+              <option>Bebek Koltuğu</option>
+              <option>Çocuk Kilidi</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-fill btn-primary" (click)="rentalAdd()">Kirala</button>
+      </div>
+    </div>
+  </div>
+</div>

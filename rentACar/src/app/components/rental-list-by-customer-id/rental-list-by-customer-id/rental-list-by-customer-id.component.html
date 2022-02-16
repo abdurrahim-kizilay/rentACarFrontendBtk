@@ -1,0 +1,14 @@
+<div class="row" style="margin-left: 10px;">
+  <div *ngFor="let rental of rentals" class="card" style="width: 18rem;margin-top:15px; margin-right: 15px;" >
+    <img src="https://th.bing.com/th/id/R.4edc4130c823e601baab18c2b8fbe54f?rik=E7Nw2NCSNrzNpA&riu=http%3a%2f%2fwww.enkisa.com%2fwp-content%2fuploads%2f2015%2f07%2fSpor-Araba-Resimleri.jpg&ehk=cc82heDE21PMOJFH9IY%2bG1sfVjJcvLIzh3BIwQmPI4M%3d&risl=&pid=ImgRaw&r=0" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-title">Kirlama Tarihi: {{rental.rentDate}}</p>
+      <p class="card-text">Kilometresi: {{rental.rentedKilometer}}</p>
+      <p class="card-text"*ngIf="rental.returnDate!=null">Dönüş Tarihi: {{rental.returnDate}}</p>
+      <!-- <a routerLink="/car/details/{{car.id}}" class="btn btn-primary">Araba Detay</a> -->
+      <a routerLink="/peyment/{{rental.id}}" *ngIf="rental.returnDate==null" class="btn btn-fill btn-primary" >Ödeme Sayfasına Git</a>
+      <a routerLink="/invoice-individual/{{rental.id}}" *ngIf="rental.returnDate!=null" class="btn btn-fill btn-primary" >Faturayı Görüntüle</a>
+
+    </div>
+  </div>
+</div>

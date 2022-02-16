@@ -1,0 +1,103 @@
+<div class="content" style="margin-top: 15px;">
+  <div class="col-md-12">
+      <div class="card">
+          <div class="card-header"><h5 class="title">Araba ekle</h5></div>
+          <div class="card-body">
+              <form [formGroup]="carAddForm">
+                  <div class="mb-3">
+                      <label for="dailyPrice">Günlük Ücret</label>
+                      <div class="form-group">
+                          <input type="text"
+                          id="dailyPrice"
+                          formControlName="dailyPrice" class="form-control"
+                          placeholder="Günlük Ücret"/>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      <label for="model">Model</label>
+                      <div class="form-group">
+                          <input type="text"
+                          id="model"
+                          formControlName="model" class="form-control"
+                          placeholder="Model"/>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      <label for="findexScore">Findex Değeri</label>
+                      <div class="form-group">
+                          <input type="text"
+                          id="findexScore"
+                          formControlName="findexScore" class="form-control"
+                          placeholder="Findex Değeri"/>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      <label for="kilometer">Kilometre</label>
+                      <div class="form-group">
+                          <input type="text"
+                          id="kilometer"
+                          formControlName="kilometer" class="form-control"
+                          placeholder="Kilometre"/>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      <label for="imageUrl">Resim Yolu</label>
+                      <div class="form-group">
+                          <input type="text"
+                          id="imageUrl"
+                          formControlName="imageUrl" class="form-control"
+                          placeholder="Resim Yolu"/>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      <label for="description">Tanım</label>
+                      <div class="form-group">
+                          <input type="text"
+                          id="description"
+                          formControlName="description" class="form-control"
+                          placeholder="Tanım"/>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      <label for="minAge">Minimum Yaş</label>
+                      <div class="form-group">
+                          <input type="text"
+                          id="minAge"
+                          formControlName="minAge" class="form-control"
+                          placeholder="Minimum Yaş"/>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="cityId">Şehir Seç</label>
+                    <select  class="form-select" aria-label="Default select example" id="cityId" formControlName="cityId" >
+                      <option *ngFor="let city of cities" value="{{city.id}}">{{city.name}}</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="segmentId">Segment Seç</label>
+                    <select  class="form-select" aria-label="Default select example" id="segmentId" formControlName="segmentId" >
+                      <option *ngFor="let segment of segments" value="{{segment.id}}">{{segment.segmentName}}</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="brandId">Marka Seç</label>
+                    <select  class="form-select" aria-label="Default select example" id="brandId" formControlName="brandId" >
+                      <option *ngFor="let brand of brands" value="{{brand.id}}">{{brand.name}}</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="minAge">Renk Seç</label>
+                    <select  class="form-select" aria-label="Default select example" id="colorId" formControlName="colorId" >
+                      <option *ngFor="let color of colors" value="{{color.id}}">{{color.name}}</option>
+                    </select>
+                  </div>
+              </form>
+          </div>
+          <div class="card-footer">
+              <button class="btn btn-fill btn-primary" (click)="add()">Ekle</button>
+          </div>
+      </div>
+
+  </div>
+
+</div>

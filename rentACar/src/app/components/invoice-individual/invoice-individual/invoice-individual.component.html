@@ -1,0 +1,26 @@
+<div class="row" style="margin-top: 15px;">
+  <div class="col-md-6">
+    <div class="row" style="margin-left: 10px;">
+      <div class="card">
+        <img
+          src="https://th.bing.com/th/id/R.4edc4130c823e601baab18c2b8fbe54f?rik=E7Nw2NCSNrzNpA&riu=http%3a%2f%2fwww.enkisa.com%2fwp-content%2fuploads%2f2015%2f07%2fSpor-Araba-Resimleri.jpg&ehk=cc82heDE21PMOJFH9IY%2bG1sfVjJcvLIzh3BIwQmPI4M%3d&risl=&pid=ImgRaw&r=0"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-title"><b>Fatura No:</b> {{invoice.id}}</p>
+          <p class="card-text"><b>Adı: </b>{{invoice.firstName}}</p>
+          <p class="card-text"><b>Soyadı: </b>{{invoice.lastName}}</p>
+          <p class="card-text"><b>E-mail: </b>{{invoice.email}} </p>
+          <p class="card-text"><b>Kiralama Tarihi: </b>{{invoice.rentDate}}</p>
+          <p class="card-text"><b>Dönüş Tarihi: </b>{{invoice.returnedDate}}</p>
+          <p class="card-text"><b>Toplam Tutar: </b>{{invoice.totalPrice}} ₺</p>
+          <p class="card-text"><b>Oluşturulma Tarihi: </b>{{invoice.creationDate}}</p>
+          <ul class="card-text" *ngFor="let additonalServiceItem of invoice.additonalServiceItems">
+            <li><b>Ek Hizmet Adı: </b>{{additonalServiceItem.name}} </li>
+            <li><b>Ek Hizmet Tutarı: </b>{{additonalServiceItem.price}} ₺ </li>
+          </ul>
+          <!-- <button class="btn btn-primary" (click)="addMaintenance()">Bakıma Ver</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

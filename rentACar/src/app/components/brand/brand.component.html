@@ -1,0 +1,12 @@
+
+<div class="list-group" style="margin-top: 15px;">
+  <button (click)="unSetCurrentBrand()" [class]="getAllBrandClass()" routerLink="/cars" type="button" class="list-group-item list-group-item-action" aria-current="true">
+    Tüm Arabalar
+  </button>
+  <button  (click)="setCurrentBrand(brand)"
+    routerLink="/cars/brand/{{brand.id}}"
+  *ngFor="let brand of brands"
+      type="button"
+      [class]="getCurrentBrandClass(brand)" >
+      {{brand.name}}</button>
+</div>
